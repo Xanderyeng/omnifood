@@ -1,0 +1,302 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-size: 62.5%; */
+  /* #e67e22 */
+  --main-color: rgba(230, 126, 34, 1);
+  /* #343a40 */
+  --grey-color: rgba(52, 58, 64, 1);
+  /* #cf711f */
+  --shade: rgba(207,113,31,1);
+  /* #45260a  */
+  --shade-dark: rgba(69,38,10,1);
+  /* #fdf2e9 */
+  --tint:rgba(253,242,233,1); 
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10p / 16px = 0.625 => 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  overflow: overlay;
+}
+
+body {
+  /* font-size: 62.5%; */
+  font-family: "rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  /*  This only works if there is nothing positioned absolutely */
+  /* overflow-x: hidden; */
+  /* overflow: overlay; */
+}
+
+/**  CK-YENG -- CUSTOM-- scrollbar  */
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #262626;
+  /* ff 3.6+ */
+  /* ff 3.6+ */
+  background-image: -moz-linear-gradient(
+    90deg,
+    rgba(246, 136, 22, 1) 0%,
+    rgba(250, 184, 115, 1) 50%,
+    rgba(246, 136, 22, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background-image: -webkit-linear-gradient(
+    90deg,
+    rgba(246, 136, 22, 1) 0%,
+    rgba(250, 184, 115, 1) 50%,
+    rgba(246, 136, 22, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background-image: -o-linear-gradient(
+    90deg,
+    rgba(246, 136, 22, 1) 0%,
+    rgba(250, 184, 115, 1) 50%,
+    rgba(246, 136, 22, 1) 100%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F68816', endColorstr='#F68816', GradientType=0 );
+
+  /* ie 10+ */
+  background-image: -ms-linear-gradient(
+    90deg,
+    rgba(246, 136, 22, 1) 0%,
+    rgba(250, 184, 115, 1) 50%,
+    rgba(246, 136, 22, 1) 100%
+  );
+
+  /* global 94%+ browsers support */
+  background-image: linear-gradient(
+    90deg,
+    rgba(246, 136, 22, 1) 0%,
+    rgba(250, 184, 115, 1) 50%,
+    rgba(246, 136, 22, 1) 100%
+  );
+}
+
+/* -------------------------------------------- */
+/* GENERAL REUSABLE COMPONENTS */
+/* -------------------------------------------- */
+.container {
+  /* 1140px - convention for max-width on the viewport */
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+    /*  ----------   GRIDS  ------------  */
+
+    .grid {
+      display: grid;
+      column-gap: 6.4rem;
+      row-gap: 9.6rem;
+      /* margin-bottom: 9.6rem; */
+    }
+    
+    /* .grid:last-child {
+      margin-bottom: 0rem;
+    } */
+    
+    /* This does the same thing as above code */
+    .grid:not(:last-child) {
+      margin-bottom: 9.6rem;
+    }
+    
+    .grid--2-cols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid--3-cols {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .grid--4-cols {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .grid--5-cols {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .grid--center-v {
+      align-items: center;
+    }
+
+/* HEADINGS AND SUB-HEADINGS */
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  letter-spacing: -0.05px;
+  color: #333; /* GREY COLORS FOR A START-UP WEBSITE PERSONALITY */
+  /* color: #45260a; */
+  /* color: #343a40; */
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.sub-heading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  margin-bottom: 1.6rem;
+  color: #cf711f;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+
+  /* Only for .btn on the Form */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  /* Changing the color in a smooth animation */
+  /* Put the Transtion in the original state of the button */
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+}
+
+.btn--cta:link,
+.btn--cta:visited {
+  color: #555;
+  background-color: #fff;
+}
+
+.btn--cta:hover,
+.btn--cta:active {
+  color: #333;
+  background-color: #fdf2e9;
+  /* Trick to add border inside.  */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
+/* LINKS AND LISTS */
+
+
+.link:link,
+.link:visited {
+  color: #e67e22;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #e67e22; */
+
+  /* Outline on focus for accessibility purposes*/
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.50);
+
+}
+
+/* Helper classes / setting classess to help in styling */
+.margin-right-sm {
+  margin-right: 1.6rem;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+strong {
+  font-weight: 600;
+}

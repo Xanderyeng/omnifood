@@ -1,0 +1,61 @@
+/* -------------------------------------------- */
+/* HERO SECTION */
+/* -------------------------------------------- */
+
+.section_hero{
+    background-color: var(--tint);
+    padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero {
+    max-width: 130rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9.6rem;
+    align-items: center;
+    padding: 0 3.2rem;
+  }
+
+  .hero_description {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 4.8rem;
+  }
+
+  .hero_img {
+    width: 100%;
+  }
+
+  .delivered_meals {
+    display: flex;
+    margin-top: 6.4rem;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  .delivered_imgs {
+    display: flex;
+  }
+
+  .delivered_imgs img{
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: 50%;
+    margin-right: -1rem;
+    border: 3px solid #fdf2e9;
+  }
+
+  .delivered_imgs img:last-child {
+    margin: 0;
+  }
+  
+  .delivered_text {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  .delivered_text span {
+    color: #e67e22;
+    font-weight: 600;
+  }

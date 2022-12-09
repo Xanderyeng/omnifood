@@ -1,0 +1,69 @@
+.section_how {
+  padding: 9.6rem 0;
+}
+
+.step_number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.step__number {
+    font-size: 8.6rem;
+    font-weight: 600;
+    color: #ddd;
+    margin-bottom: 1.2rem;
+  }
+  
+  .step_description {
+    font-size: 1.8rem;
+    line-height: 1.8;
+  }
+  
+  .step_img_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* z-index: 2; */
+  }
+  
+  .step_img_box::before {
+    content: "";
+    display: block;
+    width: 60%;
+  
+    /* height: 60%; */
+    /* 60% of Parent's width */
+    padding-bottom: 60%;
+    background-color: #fdf2e9;
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    transform: translate (-50%, -50%);
+    z-index: -2;
+    border-radius: 50%;
+  }
+  
+  .step_img_box::after {
+    content: "";
+    display: block;
+    width: 45%;
+  
+    /* height: 60%; */
+    /* 60% of Parent's width */
+    padding-bottom: 45%;
+    background-color: #fae5d3;
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    transform: translate (-50%, -50%);
+    z-index: -1;
+    border-radius: 50%;
+  }
+  
+  .step_img {
+    width: 35%;
+    /* z-index: 1; */
+  }
