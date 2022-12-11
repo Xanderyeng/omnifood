@@ -22,7 +22,7 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  overflow: overlay;
+  /* overflow: overlay; */
 }
 
 body {
@@ -32,8 +32,8 @@ body {
   font-weight: 400;
   color: #555;
   /*  This only works if there is nothing positioned absolutely */
-  overflow-x: hidden;
-  /* overflow: overlay; */
+  /* overflow-x: hidden; */
+  overflow: overlay;
 }
 
 /**  CK-YENG -- CUSTOM-- scrollbar  */
