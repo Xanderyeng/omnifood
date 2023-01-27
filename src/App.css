@@ -1,0 +1,4 @@
+.App {
+  /*  THIS OVERFLOW RESOLVES THE PROBLEM OF HAVING A HORIZONTAL SCROLLBAR. */
+  overflow-x: hidden;
+}

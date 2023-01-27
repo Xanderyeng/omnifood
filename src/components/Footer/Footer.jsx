@@ -58,8 +58,9 @@ const Footer = () => {
             </p>
           </address>
         </div>
-        <nav className='nav-col'>
+        <nav className={classes.nav_col}>
           <p className={classes.footer_heading}>Account</p>
+
           <ul className={classes.footer_nav}>
             <li>
               <a className={classes.footer_link} href='#'>
@@ -83,7 +84,7 @@ const Footer = () => {
             </li>
           </ul>
         </nav>
-        <nav className='nav-col'>
+        <nav className={classes.nav_col}>
           <p className={classes.footer_heading}>Company</p>
           <ul className={classes.footer_nav}>
             <li>
@@ -109,7 +110,7 @@ const Footer = () => {
           </ul>
         </nav>
 
-        <nav className='nav-col'>
+        <nav className={classes.nav_col}>
           <p className={classes.footer_heading}>Resources</p>
           <ul className={classes.footer_nav}>
             <li>

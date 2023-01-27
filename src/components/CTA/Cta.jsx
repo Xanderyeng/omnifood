@@ -1,6 +1,11 @@
 import React from 'react'
 import classes from './cta.module.css'
 import eating from '../../assets/eating.jpg'
+import chef from '../../assets/LeChef.jpg'
+import dev from '../../assets/Dev.jpg'
+import softPaws from '../../assets/soft-paws.jpg'
+import toonChef from '../../assets/toonLeChef.jpg'
+import toonChef2 from '../../assets/toonChef2.jpg'
 
 const Cta = () => {
     const cta_img_box = {
@@ -8,9 +13,9 @@ const Cta = () => {
         // working code ↑
         backgroundSize: "cover",
         backgroundRepeat:"no-repeat",
-        backgroundPosition: "center",
+        backgroundPosition: "left",
         // backgroundImage: `linear-gradient(rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35))`,
-        backgroundImage: `linear-gradient(rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35)), url(${eating}`,
+        backgroundImage: `linear-gradient(rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35)), url(${toonChef}`,
         // backgroundImage: "#fff",
     }
   return (
@@ -56,7 +61,7 @@ const Cta = () => {
                     </div>
 
                     {/* <!-- SCREEN READERS WILL BE ABLE TO RECOGNISE THIS ELEMENT AS AN IMAGE --> */}
-                    <div style={{...cta_img_box}} role="img" aria-label="Woman enjoying food">
+                    <div className={classes.cta_img_box} style={{...cta_img_box}} role="img" aria-label="Woman enjoying food">
 
                     </div>
                 </div>
